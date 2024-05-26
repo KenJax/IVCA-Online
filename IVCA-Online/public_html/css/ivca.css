@@ -1,0 +1,333 @@
+﻿body, html {
+    height: 100%;
+    background-color:#fff
+}
+/* pre load the logo*/
+    body::after{
+        position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
+        content:url("../img/ivcaLogo.jpg");
+    }
+
+
+.bgimg-1, .bgimg-2, .bgimg-burtonDepart, .bgimg-oostendeVelodrome{
+    /* Create the parallax scrolling effect */
+    position: relative;
+    opacity: 1;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background-image 1s linear;
+}
+.bgimg-1 {
+  background-image: url("../img/peopleLogo.jpg");
+  min-height: 90%;
+  background-position-y:-130px;
+}
+
+
+.bgimg-2 {
+  background-image: url("../img/stripeyPennys.jpg");
+  min-height: 400px;
+}
+
+.bgimg-oostende {
+  background-image: url("../img/oostendeSeascape.jpg");
+  min-height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bgimg-burtonDepart {
+    
+  background-image: url("../img/BurtonConstableDepart.jpg");
+  min-height:600px;
+  background-position:center;
+}
+
+.bgimg-oostendeVelodrome {
+    background-image: url("../img/OostendeVelodrome.jpg");
+    min-height: 600px;
+    background-position: bottom center;
+}
+
+.bgimg-cremonaLogo {
+    background-image: url('../img/41st-IVCA-Cremona-2023-SMALL.jpg');
+    min-height: 350px;
+    background-position: bottom;
+    background-size: cover;
+    padding-bottom:40px;
+}
+.bgimg-ostravaLogo {
+  background-image: url('../img/kcv-logo-001.png');
+  min-height: 350px;
+  background-position: bottom;
+  background-size: cover;
+  padding-bottom:40px;
+}
+.bgimg-farewellCremona {
+  background-image: url('../img/farewellCremona.jpg');
+  min-height: 350px;
+  background-position: bottom;
+  background-size: cover;
+  padding-bottom:40px;
+}
+
+
+/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+    .bgimg-1, .bgimg-2, .bgimg-burtonDepart {
+        background-attachment: scroll;
+    }
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  bottom:40px;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px 18px 18px 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+
+.captionFooter {
+    position: absolute;
+    left: 0;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+    .captionFooter span.border {
+        background-color: #111;
+        color: #ffd800;
+        padding: 18px 18px 18px 18px;
+        font-size: 18px;      
+    }
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+
+th {
+    font-weight:bolder ;
+    text-align:left;
+}
+
+/* Navigation menus
+
+*/
+.topMenuContainer {
+    position: fixed;
+    opacity: 0.8;
+    width: 100%;
+    top: 54px;
+    background-color: #333;
+}
+.topMenu ul {
+    width:100%;
+    list-style: none;
+}
+
+.topMenu li {
+    display:inline-block;
+    z-index: 100;
+    margin: 0px;
+    color: #fff;
+   padding: 12px 0px 16px 0px;
+}
+
+.topMenu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 10px 16px 10px;
+}
+.topMenu li a:hover{
+    color:#fff;
+    background-color:#000;
+
+}
+.objectives {
+    
+        width:800px;
+     text-align:left;
+     list-style-type:circle;
+   padding:20px;
+    margin-left: auto;  
+    margin-right:auto;
+    list-style-position: initial ;
+    overflow: hidden;
+    background-color: #fff;
+    position:inherit;
+    opacity:1;
+
+}
+
+
+
+.objectives li {
+    float:inherit ;
+    padding-top:10px;
+}
+
+.objectives li a:link {
+ 
+    color: #0300ff;
+    text-decoration: none;
+}
+/* Change the link color to #333 (grey) on hover */
+.objectives li a:hover {
+    color: #333;
+    text-decoration:underline;
+}
+
+
+/* hover menus*/
+.dropdown {
+    position: relative;
+
+    display: inline-block;
+}
+
+.dropdown-content {
+    top:40px;
+    display: none;
+    z-index: 200;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    color:#fff;
+}
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        top:20px;
+        color: #fff;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: inline-block;
+        z-index: 200;
+        opacity:1;
+    }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #111;
+            z-index: 200;
+        }
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: inline-block;
+    z-index: 200;
+    left:0px;
+    opacity:1;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #333;
+    z-index: 200;
+}
+
+#wrapper {
+    position:fixed;
+  width: 100%;
+   top:0; 
+   left:0;
+   z-index:100; 
+   overflow: hidden;
+ }
+#google_translate_element {
+  height:55px;
+  top:20px;
+  background-color:#333;
+  text-align:right;
+  
+}
+#socialLinks {
+    width:100%;
+    min-width:200px;
+    text-align:right;
+    background-color:#333;
+     height:40px;
+  top:0;
+  padding :7px;
+  float:right;
+}
+
+
+
+#bodytext {
+    background-position: 50% 10px;
+    width:800px;
+     text-align:left;
+    margin: 10px auto;
+    padding-top :100px;
+    list-style-position: initial;
+    overflow: hidden;
+    background-color: #fff;
+    position:inherit;
+    opacity:1;
+    top:200px;
+    background-image:url('../img/ivcaLogo.jpg'); 
+    background-repeat:no-repeat;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+/*
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #0099ff;
+}
+*/
+@keyframes cf4FadeInOut {
+    0% {
+    opacity:1;
+  }
+  17% {
+    opacity:1;
+  }
+  25% {
+    opacity:0;
+  }
+  92% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+#cf4a img:nth-of-type(1) {
+  animation-delay: 6s;
+}
+#cf4a img:nth-of-type(2) {
+  animation-delay: 4s;
+}
+#cf4a img:nth-of-type(3) {
+  animation-delay: 2s;
+}
+#cf4a img:nth-of-type(4) {
+  animation-delay: 0;
+}

@@ -1,0 +1,27 @@
+﻿body {
+  
+    background-image: url('../img/Journals.jpg');
+    background-position:center;
+}
+
+
+.journalMenu {
+    float: left;
+    width: 20%;
+    padding: 10px;
+}
+
+.journalText {
+    float:left ;
+    width: 70%;
+    padding: 10px;
+}
+
+
+/* Clear floats after the columns */
+#bodytext:after {
+  content: "";
+  display: table;
+  clear: both;
+  opacity:1;
+}
